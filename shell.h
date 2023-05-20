@@ -117,4 +117,8 @@ int ePutChar(char);
 int putFd(char c, int fd);
 int putsFd(char *str, int fd);
 
+/* toem_exits.c */
+char *strCpy(char *, char *, int);
+char *strCat(char *, char *, int);
+char *strChr(char *, char);
 #endif
