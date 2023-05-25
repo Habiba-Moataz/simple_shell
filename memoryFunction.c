@@ -30,32 +30,3 @@ void ffree(char *pp)
 		free(*pp++);
 	free(a);
 }
-
-/**
- * realloc - reallocates a block of memory
- * @ptr: a pointer to previous mallocated block
- * @oldSize: byte size of previous block
- * @newSize: byte size of new block
- * Return: pointer to da ol block namen
- */
-void *_realloc(void *ptr, unsigned int oldSize, unsigned int newSize).
-{
-	char *z;
-
-	if(!ptr)
-		return (malloc(newSize));
-	if(!newSize)
-		return(free(ptr),NULL);
-	if(newSize == oldSize)
-		return(ptr);
-
-	z = malloc(newSize);
-	if(!z)
-		return(NULL);
-	oldSize = oldSize < newSize ? oldSize : newSize;
-	while (oldSize--)
-		z[oldSize] = ((char *)ptr)[oldSize];
-	free(ptr);
-	return(z);
-}
-
