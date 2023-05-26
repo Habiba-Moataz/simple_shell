@@ -13,7 +13,7 @@ char **get_environ(info_t *inf)
 		inf->env_changed = 0;
 	}
 
-	return (info->environ);
+	return (inf->environ);
 }
 
 /**
@@ -77,7 +77,7 @@ int _setenv(info_t *inf, char *v, char *val)
 		{
 			free(node->str);
 			node->str = buf;
-			info->env_changed = 1;
+			inf->env_changed = 1;
 			return (0);
 		}
 		node = node->next;
